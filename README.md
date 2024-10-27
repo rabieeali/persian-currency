@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# PersianNumber Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+`PersianNumber` is a React component that converts and displays numbers in Persian words. It’s designed to handle various number formats, including decimals and large values, providing a customizable way to represent numeric values in Persian.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install the package using npm:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install persian-currency
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Example
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```javascript
+import { PersianNumber } from 'persian-currency'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+const App = () => (
+    <div>
+        <PersianNumber value={123} unit="تومان" />
+    </div>
+);
+
+export default App;
 ```
+
+Props
+
+| Prop        | Type                  | Default | Description                                                                  |
+|-------------|-----------------------|---------|------------------------------------------------------------------------------|
+| `value`     | `number`              | `0`     | The numeric value to convert to Persian words.                               |
+| `unit`      | `string`              | `''`    | Optional unit to display after the converted Persian words.                  |
+| `style`     | `React.CSSProperties` | `null`  | Inline CSS styles to apply to the rendered component.                        |
+| `className` | `string`              | `''`    | Optional class name(s) for custom styling.                                   |
