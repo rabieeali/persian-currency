@@ -10,7 +10,11 @@ Install the package using npm:
 npm install persian-currency
 ```
 
-Example
+## Repository
+[Repository](https://github.com/rabieeali/persian-currency)
+
+
+## Example
 
 ```javascript
 import { PersianNumber } from 'persian-currency'
@@ -24,7 +28,7 @@ const App = () => (
 export default App;
 ```
 
-Props
+## Props
 
 | Prop        | Type                  | Default | Description                                                                  |
 |-------------|-----------------------|---------|------------------------------------------------------------------------------|
@@ -32,3 +36,9 @@ Props
 | `unit`      | `string`              | `''`    | Optional unit to display after the converted Persian words.                  |
 | `style`     | `React.CSSProperties` | `null`  | Inline CSS styles to apply to the rendered component.                        |
 | `className` | `string`              | `''`    | Optional class name(s) for custom styling.                                   |
+
+## Contributing
+
+Contributions are welcome! If you’d like to contribute to this project, please feel free to submit a pull request or open an issue on GitHub.
+
+[GitHub Repository](https://github.com/rabieeali/persian-currency)
